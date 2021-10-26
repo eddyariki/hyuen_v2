@@ -1,25 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import ResponsiveHome from "./components/home/ResponsiveHome";
+import Monolith from "./components/desktop/albums/Monolith";
+// import { createGlobalStyle } from "styled-components";
+import GlobalStyle from "./global.css";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
-function App() {
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <GlobalStyle />
+      <Switch>
+        <Route path="/" component={ResponsiveHome} exact />
+        <Route path="/monolith" exact component={Monolith} />
+      </Switch>
+    </Router>
   );
 }
-
-export default App;

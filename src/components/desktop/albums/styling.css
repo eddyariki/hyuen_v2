@@ -1,0 +1,86 @@
+.monolith-container {
+  display: grid;
+  height: 100vh;
+  width: 100vw;
+  justify-items: center;
+  align-items: center;
+  overflow-x: hidden;
+}
+
+.monolith-card {
+  padding-top: 10vh;
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 5vh;
+}
+.monolith-jacket {
+  grid-row: 1/2;
+  overflow: hidden;
+  position: relative;
+  width: 30vw;
+  height: 30vw;
+  /* border: 2vw #3b3934 solid; */
+  justify-self: center;
+  align-self: center;
+}
+.monolith-image {
+  width: 30vw;
+  height: 30vw;
+  z-index: 1;
+  position: absolute;
+}
+
+.monolith-background {
+  z-index: 0;
+  text-align: center;
+  position: absolute;
+}
+.monolith-songs {
+  grid-row: 3/4;
+  align-self: center;
+}
+ul {
+  list-style: decimal;
+}
+.monolith-info {
+  grid-column-start: 1;
+  text-align: center;
+  overflow: hidden;
+}
+.monolith-header {
+  font-size: 4rem;
+  display: inline-block;
+  color: #000000;
+  border-bottom: solid 1px #2b2928;
+  font-family: "athelas";
+}
+.monolith-span {
+  color: #000000;
+  font-size: 4rem;
+}
+.monolith-text {
+  padding-top: 3rem;
+  padding-bottom: 1rem;
+  font-size: 1.5rem;
+  font-family: "Courier New", Courier, monospace;
+}
+.monolith-ego {
+  width: 640px;
+  height: 360px;
+}
+
+.monolith-link {
+  font-weight: bold;
+  padding-top: 2rem;
+  font-family: "Courier New", Courier, monospace;
+  color: #383635;
+  font-size: 2.5rem;
+  transition: 0.2s;
+  width: auto;
+  transform-origin: center;
+}
+
+.monolith-link:hover {
+  color: #504a46;
+  transform: rotateZ(20deg);
+}
